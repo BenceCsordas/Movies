@@ -20,16 +20,16 @@ export const MyBottomNav = () => {
   }
 
   return (
-    <Box sx={{ maxWidth: 500, position:'fixed', bottom:0}}>
+    <Box sx={{ width: '100%', position:'fixed', bottom:0}}>
       <BottomNavigation
         showLabels
         value={value}
         onChange={handleChange}
-        sx={{backgroundColor:"#172554"}}
+        sx={{backgroundColor:"#6b7280"}}
       >
-        <BottomNavigationAction sx={{color:"#bae6fd"}} label="Movies" icon={<MdMovie   />} />
-        <BottomNavigationAction sx={{color:"#bae6fd"}} label="TVSeries" icon={<FaTv    />} />
-        <BottomNavigationAction sx={{color:"#bae6fd"}} label="Search" icon={<FaSearch  />} />
+        <BottomNavigationAction sx={{color:"whitesmoke", fontWeight:'bold'}} label="Movies" icon={<MdMovie   fontSize={'1.5rem'}/>} />
+        <BottomNavigationAction sx={{color:"whitesmoke", fontWeight:'bold'}} label="TVSeries" icon={<FaTv    fontSize={'1.5rem'}/>} />
+        <BottomNavigationAction sx={{color:"whitesmoke",fontWeight:'bold'}} label="Search" icon={<FaSearch  fontSize={'1.5rem'}/>} />
       </BottomNavigation>
     </Box>
   );
