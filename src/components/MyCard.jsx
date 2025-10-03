@@ -27,5 +27,6 @@ export const MyCard = ({backdrop_path, original_title, release_date, vote_averag
       </CardContent>
       
     </Card>
+    /*Kártya...*/ 
   )
 }
