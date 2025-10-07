@@ -10,18 +10,29 @@
 .rating{
     position: absolute;
     border-radius: 50%;
-    background-color: #94a3b8;
-    border: 1px solid white;
+    color: #422006;
+    background-color: #fde68a;
+    font-weight: bold;
+    border: 2px solid #fde047;
     width: 40px;
     height: 40px;
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 45%;
+    bottom: 15%;
     right: 5%;
-    
-    
-    
-    
+}
+
+.card:hover{
+    transition: 0.1s;
+    background-color: #233146;
+}
+
+.MuiPaginationItem-root{
+    color: whitesmoke !important;
+}
+.MuiPaginationItem-root.Mui-selected{
+    color: #99f6e4 !important;
+    font-weight: bold;
 }

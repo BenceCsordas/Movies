@@ -2,8 +2,11 @@ import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import React from 'react'
+import { ContentPagination } from './ContentPagination'
 
-export const PageLayout = ({title, children}) => {
+
+export const PageLayout = ({title, children, page, setPage}) => {
+  
   return (
     <Container  maxWidth={false}
      sx={{background:'linear-gradient(to right, #404040, #71717a)', 
@@ -16,6 +19,10 @@ export const PageLayout = ({title, children}) => {
         p:'1rem'
         }}>{title}</Typography>
         <Box>{children}</Box>
+        {/*Oldallapozó*/}
+        <Box display="flex" justifyContent="center" sx={{padding:'15px'}}>
+        <ContentPagination page={page} setPage={setPage}/>
+        </Box>
     </Container>
   )
 }

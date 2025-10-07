@@ -1,5 +1,5 @@
 import React from 'react'
-import { img_300 } from '../utils'
+import { img_300, img_500 } from '../utils'
 
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -8,12 +8,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export const MyCard = ({backdrop_path, original_title, release_date, vote_average}) => {
+export const MyCard = ({poster_path, original_title, release_date, vote_average}) => {
   return (
-     <Card sx={{position:"relative",  width: 345, bgcolor:"#334155", color:"white"}}>
+     <Card sx={{position:"relative",  width: 345, bgcolor:"#334155", color:"white"}} className='card'>
       <CardMedia
-        sx={{ height: 140}}
-        image={img_300+backdrop_path}
+        sx={{  backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundPosition:"center"}} height="auto" width="auto" component="img"
+        image={img_500+poster_path}
         title={original_title}
       />
       <div className='rating'>{Math.round(vote_average*10)/10}</div>
