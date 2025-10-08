@@ -10,14 +10,16 @@ import Typography from '@mui/material/Typography';
 
 export const MyCard = ({poster_path, original_title, release_date, vote_average}) => {
   return (
-     <Card sx={{position:"relative",  width: 345, bgcolor:"#334155", color:"white"}} className='card'>
+     <Card sx={{position:"relative",  width: 345, bgcolor:"#334155", color:"white"
+}} className='card'>
       <CardMedia
-        sx={{  backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundPosition:"center"}} height="auto" width="auto" component="img"
+        sx={{backgroundSize:"cover", backgroundRepeat:"no-repeat", backgroundPosition:"center", userSelect:"none"}} height="auto" width="auto" component="img"
         image={img_500+poster_path}
         title={original_title}
       />
+      <div className='ratingbg'></div>
       <div className='rating'>{Math.round(vote_average*10)/10}</div>
-      <CardContent sx={{height:"110px"}}>
+      <CardContent sx={{height:"110px", display:"flex", flexDirection:"column"}}>
         <Typography gutterBottom variant="h5" component="div">
           {original_title}
         </Typography>

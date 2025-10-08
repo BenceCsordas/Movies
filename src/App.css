@@ -7,6 +7,7 @@
 .css-1fapshd-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
     color: #99f6e4 !important;
 }
+
 .rating{
     position: absolute;
     border-radius: 50%;
@@ -24,14 +25,34 @@
     right: 5%;
 }
 
+.ratingbg{
+    position: absolute;
+    border-radius: 50%;
+    bottom: 15%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffdc2b;
+    background-color: #ffdc2b;
+}
+
+.rating:hover{
+    border: 2px solid #ffdc2b;
+    background-color: #ffe064;
+    transform: translate(2px, -2px);
+    transition: 0.5s;
+}
+
 .card:hover{
     transition: 0.1s;
     background-color: #233146;
+    box-shadow: 0px 3px 25px 5px rgba(17,24,39,0.86);
 }
 
 .MuiPaginationItem-root{
     color: whitesmoke !important;
 }
+
 .MuiPaginationItem-root.Mui-selected{
     color: #99f6e4 !important;
     font-weight: bold;
