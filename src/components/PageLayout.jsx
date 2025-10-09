@@ -10,6 +10,8 @@ export const PageLayout = ({ title, children, page, setPage , type, selectedGenr
     <Container
       maxWidth={false}
       sx={{
+        display:"flex",
+        flexDirection:"column",
         background: "linear-gradient(to right, #404040, #71717a)",
         color: "whitesmoke",
         minHeight: "100vh",
@@ -31,10 +33,10 @@ export const PageLayout = ({ title, children, page, setPage , type, selectedGenr
       >
         {title}
       </Typography>
-      <Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
+      {title != "Search Page" &&<Genres type={type} selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>}
       <Box>{children}</Box>
       {/*Oldallapozó*/}
-      <Box display="flex" justifyContent="center" sx={{ padding: "15px" }}>
+      <Box display="flex" justifyContent="center" sx={{ padding: "15px" , marginTop:"auto"}}>
         <ContentPagination page={page} setPage={setPage} />
       </Box>
     </Container>

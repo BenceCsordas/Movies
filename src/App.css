@@ -7,7 +7,18 @@
 .css-1fapshd-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
     color: #99f6e4 !important;
 }
-
+.css-eok8s2-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: whitesmoke !important;
+}
+.css-voecp4-MuiInputBase-input-MuiFilledInput-input, .css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #99f6e4 !important;
+}
+.css-1qltlow-MuiTabs-indicator{
+    background-color: #99f6e4 !important;
+}
+.css-1pht7va-MuiInputBase-root-MuiFilledInput-root::after {
+    border-bottom: 2px solid #99f6e4 !important;
+}
 .rating{
     position: absolute;
     border-radius: 50%;
