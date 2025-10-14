@@ -26,9 +26,10 @@ export const SearchPage = () => {
   return (
     <div>
       <PageLayout title="Search Page" page={page} setPage={setPage}>
-        <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", margin:"10px"}}>
+        <Box sx={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", margin:"10px",gap:"5px"}}>
         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center"}}>
           <TextField
+            className="TextField"
             id="filled-basic"
             label="Search"
             variant="filled"
@@ -39,12 +40,13 @@ export const SearchPage = () => {
           </Button>
         </Box>
         <Tabs
+          
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Movies" />
-          <Tab label="TV Series" />
+          <Tab label="Movies" className="Tab"/>
+          <Tab label="TV Series" className="Tab"/>
         </Tabs>
         </Box>
         <Grid sx={{display:'flex', flexWrap:'wrap', gap:"10px", justifyContent:'center'}}>

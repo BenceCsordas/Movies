@@ -11,7 +11,7 @@ export const Movies = () => {
   const [selectedGenres, setSelectedGenres] = useState([])
   const {data, isLoading, isError, error} = useQuery({queryKey:['moviesdata', 'movie', page, selectedGenres], queryFn:getData})
 
-  data && console.log(page)
+  data && console.log(data)
   
   return (
     <div>
@@ -19,6 +19,7 @@ export const Movies = () => {
 
         <Grid sx={{display:'flex', flexWrap:'wrap', gap:"15px", justifyContent:'center'}}>
           {data && data.results.map(obj=>
+          
             <MyCard key={obj.id} {...obj}/>
           )}
         </Grid>
