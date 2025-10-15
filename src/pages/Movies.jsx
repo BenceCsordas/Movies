@@ -20,7 +20,7 @@ export const Movies = () => {
         <Grid sx={{display:'flex', flexWrap:'wrap', gap:"15px", justifyContent:'center'}}>
           {data && data.results.map(obj=>
           
-            <MyCard key={obj.id} {...obj}/>
+            <MyCard key={obj.id} {...obj} type='movie'/>
           )}
         </Grid>
           

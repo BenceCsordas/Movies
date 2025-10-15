@@ -51,7 +51,7 @@ export const SearchPage = () => {
         </Box>
         <Grid sx={{display:'flex', flexWrap:'wrap', gap:"10px", justifyContent:'center'}}>
           {data && data.results.map(obj=>
-              <MyCard key={obj.id} original_title={obj.original_name} poster_path={obj.poster_path} {...obj} release_date={obj.first_air_date} />
+              <MyCard key={obj.id} original_title={obj.original_name} poster_path={obj.poster_path} {...obj} release_date={obj.first_air_date} type={value == 0 ? "movie" : "tv"} />
           )}
         </Grid>
       </PageLayout>

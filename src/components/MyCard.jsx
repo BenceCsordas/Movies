@@ -7,8 +7,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
+
 import Box from "@mui/material/Box";
+import { MyModal } from "./MyModal";
+
 
 export const MyCard = ({
   poster_path,
@@ -18,21 +20,14 @@ export const MyCard = ({
   title,
   backdrop_path,
   overview,
+  id, 
+  type
 }) => {
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    bgcolor: "background.paper",   
-    boxShadow: 24,
-    p: 4,
-  };
-
+  
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+  console.log(type);
+  
   return (
     <div>
       <Card
@@ -76,30 +71,8 @@ export const MyCard = ({
         </CardContent>
       </Card>
 
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <CardMedia
-          height="auto"
-          width="auto"
-          component="img"
-          image={backdrop_path ? img_500 + backdrop_path : null}
-          title={original_title}
-          >
-
-          </CardMedia>
-          <Typography variant="h6" component="h2" sx={{textAlign:"center"}} mt={2}>
-            <b>{title}</b> ({release_date})
-          </Typography>
-          <Typography sx={{ mt: 2 }}>
-            {overview}
-          </Typography>
-        </Box>
-      </Modal>
+      
+      <MyModal open={open} setOpen={setOpen} id={id} type={type}/>
     </div>
     /*Kártya...*/
   );

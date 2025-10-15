@@ -30,8 +30,14 @@ export const getSearchData = async ({queryKey}) => {
     console.log(url);
     const resp = await axios.get(url)
     return resp.data
-
 }
+
 export const img_300='https://image.tmdb.org/t/p/w300';
 export const img_500='https://image.tmdb.org/t/p/w500';
 export const noImg ='https://www.movienewz.com/img/films/poster-holder.jpg'
+
+export const getDetailsData = async ({queryKey}) => {
+    console.log(queryKey[1])
+    const resp = await axios.get(queryKey[1])
+    return resp.data
+}

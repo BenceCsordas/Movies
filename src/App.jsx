@@ -4,6 +4,8 @@ import {Movies} from './pages/Movies'
 import {TVSeries} from './pages/TVSeries'
 import {SearchPage} from './pages/SearchPage'
 import { MyLayout } from './components/MyLayout'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
 
