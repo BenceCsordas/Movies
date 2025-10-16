@@ -1,7 +1,7 @@
 import { Box, CardMedia, CircularProgress, colors, Typography } from '@mui/material'
 import Modal from "@mui/material/Modal";
 import React from 'react'
-import { getDetailsData, img_500 } from '../utils';
+import { getDetailsData, img_500, noImg } from '../utils';
 import { useQuery } from 'react-query';
 import { MyCarousel } from './MyCarousel';
 import { ShowTrailer } from './ShowTrailer';
@@ -34,8 +34,9 @@ export const MyModal = ({open, setOpen, id, type}) => {
   if(isLoading) return <CircularProgress />
 
   return (
-    <div>
+    <div className='Mymodal'>
       <Modal
+        sx={{overflow:"auto"}}
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -51,18 +52,21 @@ export const MyModal = ({open, setOpen, id, type}) => {
           >
 
           </CardMedia>
-          <Typography variant="h6" component="h2" sx={{textAlign:"center"}} mt={2}>
+          <Box className="modalBox">
+            <Typography variant="h6" component="h2" sx={{textAlign:"center"}} mt={2}>
             <b>{type == "movie" ? data?.title : data?.name}</b> ({type == "movie" ? data?.release_date : data?.first_air_date})
           </Typography>
-          <Typography sx={{ mt: 2 }}>
+          <Typography sx={{ mt: 2,  overflow:"auto", maxHeight:"150px"}}>
             {data?.overview}
           </Typography>
-          <Typography className='asd'>
+          <Box>
               <MyCarousel id={id} type={type}/>
-          </Typography>
-          <Typography className='trailer'>
+          </Box>
+          <Box className='trailer'>
               <ShowTrailer type={type} id={id}/>
-          </Typography>
+          </Box>
+          </Box>
+          
         </Box>}
       </Modal>
     </div>

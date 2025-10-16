@@ -36,20 +36,22 @@ export const MyCard = ({
           width: 345,
           bgcolor: "#334155",
           color: "white",
+           "@media screen and (max-width: 400px)":{
+                width:"280px"
+          }
         }}
         className="card"
       >
         <CardMedia
           onClick={handleOpen}
-          //onClick={() => toggle(release_date, title, backdrop_path, overview)}
+          
           sx={{
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             userSelect: "none",
-          }}
-          height="auto"
-          width="auto"
+           
+          }}          
           component="img"
           image={poster_path ? img_500 + poster_path : noImg}
           title={original_title}

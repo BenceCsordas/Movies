@@ -11,7 +11,7 @@ export const MyCarousel = ({id, type}) => {
   data && console.log(data)
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -23,7 +23,7 @@ export const MyCarousel = ({id, type}) => {
     <Slider {...settings}>
       {data && data.cast.map(obj =>
         <div className="actor" key={obj.id} >
-            <img className="carouselImg" src={obj.profile_path ? img_300+obj.profile_path : noImg} alt="" />
+            <img className="carouselImg" src={obj.profile_path ? img_300+obj.profile_path : noImg} alt="" style={{borderRadius:"10px"}}/>
             <b>{obj?.name}</b>
         </div>
       )}

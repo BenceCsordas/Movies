@@ -99,3 +99,55 @@
 button::before{
     color: #e5e5e5 !important;
 }
+.actor b{
+    text-align: center;
+    width: 90%;
+}
+
+@media screen and (max-width:700px){
+    .modal {
+        max-width: 500px !important;
+        min-width: 500px !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    .modal {
+        max-width: 320px !important;
+        min-width: 320px !important;
+        padding: 0px !important;
+       
+    }
+    
+    .modalBox{
+        padding: 0px 32px 32px 32px;
+    }
+    .carouselImg{
+        width: 50px !important;
+    }
+    .actor b {
+        font-size: 0.75rem;
+    }
+    .slick-list{
+        max-height: 150px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .rating, .ratingbg{
+        bottom: 17%;
+    }
+}
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: #e5e5e5;
+    border-radius: 5px;
+}
+
